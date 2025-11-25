@@ -1,28 +1,23 @@
 import re
-from typing import Callable, Generator
 
-
-def generator_numbers(text: str) -> Generator[float, None, None]:
+def generator_numbers(text: str):
     """
-    Функція-генератор, що ітерує по всіх дійсних числах,
-    чітко відокремлених пробілами з обох боків у тексті.
+    Генератор, що ітерує по дійсних числах у тексті,
+    які чітко відокремлені пробілами.
     """
-    # Регулярний вираз для пошуку дійсних чисел з пробілами з обох сторін
     pattern = r'(?<=\s)[0-9]+\.?[0-9]*(?=\s)'
     for match in re.finditer(pattern, text):
         yield float(match.group())
 
-
-def sum_profit(text: str, func: Callable) -> float:
+def sum_profit(text: str, func):
     """
-    Функція для підсумовування чисел,
-    отриманих від генератора func на основі тексту.
+    Підсумовує числа із генератора, який повертає func,
+    викликаний із текстом.
     """
     total = 0.0
     for number in func(text):
         total += number
     return total
-
 
 # Приклад використання
 text = ("Загальний дохід працівника складається з декількох частин: "
