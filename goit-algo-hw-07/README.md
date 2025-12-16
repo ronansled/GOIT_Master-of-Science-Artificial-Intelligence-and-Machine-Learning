@@ -6,20 +6,24 @@
 │   ├── test_avl_tree.py
 │   └── README.md
 │
+
 ├── task-2/
 │   ├── avl_tree.py
 │   ├── test_avl_tree.py
 │   └── README.md
 │
+
 ├── task-3/
 │   ├── avl_tree.py
 │   ├── test_avl_tree.py
 │   └── README.md
 │
+
 └── task-4/
     ├── comment.py
     ├── test_comment.py
     └── README.md
+
 
 
 Кожна задача:
